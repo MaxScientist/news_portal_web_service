@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="2.1"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="NewsPersistenceUnit" transaction-type="JTA">
+        <jta-data-source>java:/OracleDS</jta-data-source>
+        <class>com.example.newsportal_webservice.entity.News</class>
+        <properties>
+
+            <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.driver.OracleDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@//172.17.0.2:1521/ORCLPDB1"/>
+            <property name="javax.persistence.jdbc.user" value="news_portal"/>
+            <property name="javax.persistence.jdbc.password" value="News_portal_456"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.show_sql" value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
+            <property name="org.jboss." value=""/>
+
+
+        </properties>
+    </persistence-unit>
+</persistence>
